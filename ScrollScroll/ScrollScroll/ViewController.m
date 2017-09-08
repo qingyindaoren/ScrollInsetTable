@@ -15,7 +15,8 @@
 static CGFloat floatViewHeight = 30.0;
 
 static CGFloat navHeitht = 64;
-//tableview 的y值 在scrollview中的位置
+// 这个系数根据自己喜好设置大小，=屏幕视图滑动距离/手指滑动距离
+#define  moveScale 2
 
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource,UIGestureRecognizerDelegate>
@@ -26,6 +27,8 @@ static CGFloat navHeitht = 64;
 @property (nonatomic,assign)CGFloat tableStartY;
 @property (nonatomic,assign)CGFloat scrollY;
 @property (nonatomic,assign)CGFloat scrollStartY;
+
+//tableview 的y值 在scrollview中的位置
 @property (nonatomic,assign)CGFloat tableFrameY;
 @end
 
@@ -137,7 +140,7 @@ static CGFloat navHeitht = 64;
     }
     self.tableStartY = gesture.startPoint.y;
     
-    self.tableY += scrolly*2;
+    self.tableY += scrolly*moveScale;
     
     //为了显示底部超出屏幕的tableview那部分 滑动scrollview 此时tablewview已经滑动到了底部
     if (self.tableY> self.insetTableView.contentSize.height-self.insetTableView.bounds.size.height){
@@ -196,7 +199,7 @@ static CGFloat navHeitht = 64;
     }
     self.scrollStartY = gesture.startPoint.y;
     
-    self.scrollY += scrolly*2;
+    self.scrollY += scrolly*moveScale;
     
     //如果滑到了scroll的底部就不要滑了
     if (self.scrollY> self.scroll.contentSize.height-self.insetTableView.bounds.size.height-floatViewHeight){

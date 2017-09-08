@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		FF4BB29F1F60E86B007BD27D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4BB29E1F60E86B007BD27D /* main.m */; };
 		FF4BB2A21F60E86B007BD27D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4BB2A11F60E86B007BD27D /* AppDelegate.m */; };
-		FF4BB2A51F60E86B007BD27D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4BB2A41F60E86B007BD27D /* ViewController.m */; };
 		FF4BB2A81F60E86B007BD27D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4BB2A61F60E86B007BD27D /* Main.storyboard */; };
 		FF4BB2AA1F60E86B007BD27D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF4BB2A91F60E86B007BD27D /* Assets.xcassets */; };
 		FF4BB2AD1F60E86B007BD27D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4BB2AB1F60E86B007BD27D /* LaunchScreen.storyboard */; };
@@ -18,6 +17,7 @@
 		FF4BB2D51F611E70007BD27D /* YYGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4BB2D41F611E70007BD27D /* YYGestureRecognizer.m */; };
 		FF4BB2D91F626234007BD27D /* ScrollTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4BB2D71F626234007BD27D /* ScrollTableViewCell.m */; };
 		FF4BB2DA1F626234007BD27D /* ScrollTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF4BB2D81F626234007BD27D /* ScrollTableViewCell.xib */; };
+		FF4BB2DC1F62760D007BD27D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF4BB2DB1F62760D007BD27D /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,6 @@
 		FF4BB2A01F60E86B007BD27D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FF4BB2A11F60E86B007BD27D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FF4BB2A31F60E86B007BD27D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FF4BB2A41F60E86B007BD27D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FF4BB2A71F60E86B007BD27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF4BB2A91F60E86B007BD27D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF4BB2AC1F60E86B007BD27D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		FF4BB2D61F626234007BD27D /* ScrollTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTableViewCell.h; sourceTree = "<group>"; };
 		FF4BB2D71F626234007BD27D /* ScrollTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTableViewCell.m; sourceTree = "<group>"; };
 		FF4BB2D81F626234007BD27D /* ScrollTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollTableViewCell.xib; sourceTree = "<group>"; };
+		FF4BB2DB1F62760D007BD27D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +114,7 @@
 				FF4BB2D31F611E70007BD27D /* YYGestureRecognizer.h */,
 				FF4BB2D41F611E70007BD27D /* YYGestureRecognizer.m */,
 				FF4BB2A31F60E86B007BD27D /* ViewController.h */,
-				FF4BB2A41F60E86B007BD27D /* ViewController.m */,
+				FF4BB2DB1F62760D007BD27D /* ViewController.m */,
 				FF4BB2A61F60E86B007BD27D /* Main.storyboard */,
 				FF4BB2A91F60E86B007BD27D /* Assets.xcassets */,
 				FF4BB2AB1F60E86B007BD27D /* LaunchScreen.storyboard */,
@@ -291,10 +291,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF4BB2D91F626234007BD27D /* ScrollTableViewCell.m in Sources */,
-				FF4BB2A51F60E86B007BD27D /* ViewController.m in Sources */,
 				FF4BB2D51F611E70007BD27D /* YYGestureRecognizer.m in Sources */,
 				FF4BB2A21F60E86B007BD27D /* AppDelegate.m in Sources */,
 				FF4BB29F1F60E86B007BD27D /* main.m in Sources */,
+				FF4BB2DC1F62760D007BD27D /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +534,7 @@
 				FF4BB2C91F60E86B007BD27D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF4BB2CA1F60E86B007BD27D /* Build configuration list for PBXNativeTarget "ScrollScrollTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +543,7 @@
 				FF4BB2CC1F60E86B007BD27D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF4BB2CD1F60E86B007BD27D /* Build configuration list for PBXNativeTarget "ScrollScrollUITests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +552,7 @@
 				FF4BB2CF1F60E86B007BD27D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

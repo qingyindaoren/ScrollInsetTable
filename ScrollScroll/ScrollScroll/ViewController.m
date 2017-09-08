@@ -51,8 +51,15 @@ static CGFloat navHeitht = 64;
 
     [self.view addSubview:scroll];
     self.scroll = scroll;
+    
+   
     //根据需求设置tableview的y值 暂写scroll高的2分之一
      self.tableFrameY = self.scroll.frame.size.height/2;
+    
+    UIImageView *headImage = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, self.tableFrameY-floatViewHeight)];
+    headImage.image = [UIImage imageNamed:@"scrollHead"];
+    headImage.contentMode = UIViewContentModeScaleAspectFill;
+    [self.scroll addSubview:headImage];
     
     NSArray *titles = @[@"ICO详情",@"央行放大招",@"比特币会涨",@"神秘中本村"];
     self.titles = titles;
@@ -228,7 +235,7 @@ static CGFloat navHeitht = 64;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return 10;
 }
 
 
@@ -252,12 +259,32 @@ static CGFloat navHeitht = 64;
     cell.indexPath = indexPath;
     
     cell.selectCellBlock = ^(NSIndexPath *indexPath) {
-          NSLog(@"点击了第%ld行",indexPath.row);
+        NSLog(@"点击了第%ld组%ld行",indexPath.section,indexPath.row);
     };
     
     return cell;
 }
-
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
+    return 3;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *v = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 50)];
+    v.backgroundColor = [UIColor orangeColor];
+    UILabel *l = [[UILabel alloc]initWithFrame:v.bounds];
+    l.text =[NSString stringWithFormat:@"tableview的组头%ld",section];
+    l.textColor = [UIColor whiteColor];
+    l.textAlignment = NSTextAlignmentCenter;
+    [v addSubview:l];
+    return v;
+}
+//组头高
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    return 50;
+    
+    
+}
 //这个方法不可用了，除非点击了cellcontenview之外的区域 只能同过加按钮的方式接受点击事件
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"点击了第%ld行",indexPath.row);

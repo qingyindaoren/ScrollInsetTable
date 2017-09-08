@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "YYGestureRecognizer.h"
 #import "ScrollTableViewCell.h"
+#import "MBProgressHUD+Add.h"
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 //虚假的悬浮效果
@@ -259,7 +260,10 @@ static CGFloat navHeitht = 64;
     cell.indexPath = indexPath;
     
     cell.selectCellBlock = ^(NSIndexPath *indexPath) {
-        NSLog(@"点击了第%ld组%ld行",indexPath.section,indexPath.row);
+        NSString *tip = [NSString stringWithFormat:@"点击了第%ld组%ld行",indexPath.section,indexPath.row];;
+        [MBProgressHUD showMessage:tip view:nil];
+        
+        NSLog(@"%@",tip);
     };
     
     return cell;
